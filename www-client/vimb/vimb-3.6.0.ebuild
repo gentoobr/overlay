@@ -36,9 +36,7 @@ RDEPEND="
 "
 src_prepare() {
 	default
-
 	sed -i '/Icon/s/$/browser/' vimb.desktop
-
 	restore_config "${WORKDIR}"/"${P}"/src/config.h
 }
 
@@ -50,7 +48,7 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 
 	if use adblock; then
-		ln -s /usr/lib/wyebrowser/adblock.so "${D}"/usr/lib/vimb/
+		ln -s /usr/lib/wyebrowser/adblock.so "${D}"/usr/lib/vimb/adblock.so
 	fi
 
 	save_config "${WORKDIR}"/"${P}"/src/config.h
