@@ -7,15 +7,16 @@
 	</maintainer>
 	<use>
 		<flag name="adblock">
-			use www-plugins/wyebadblock	for adblocking
+			Use www-plugins/wyebadblock	for ad blocking
 		</flag>
 		<flag name="gstreamer">
 			Add support for media-libs/gstreamer (Streaming media)
 		</flag>
 	</use>
 	<longdescription lang="en">
-		Vimb - the vim like browser is a webkit based web browser that behaves like the vimperator plugin 
-		for the firefox and usage paradigms from the great editor vim. The goal of vimb is to build a 
-		completely keyboard-driven, efficient and pleasurable browsing-experience.
+		Vimb - the vim like browser is a webkit based web browser that behaves like
+		the vimperator plugin for the firefox and usage paradigms from the great
+		editor vim. The goal of vimb is to build a completely keyboard-driven,
+		efficient and pleasurable browsing-experience.
 	</longdescription>
 </pkgmetadata>
