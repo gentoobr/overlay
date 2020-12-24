@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>cassioavila@yandex.com</email>
+		<name>Cássio Ribeiro Alves de Àvila</name>
+	</maintainer>
+	<longdescription lang="en">
+		An adblock extension for wyeb, also webkit2gtk browsers.
+	</longdescription>
+</pkgmetadata>
