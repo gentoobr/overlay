@@ -13,6 +13,9 @@ LICENSE=""
 SLOT="0"
 KEYWORDS=""
 
-DEPEND=""
+DEPEND="
+	x11-libs/gtk+:3
+	net-libs/webkit-gtk
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
