@@ -1,0 +1,16 @@
+diff --git a/Makefile b/Makefile
+index a1217d9..def9296 100644
+--- a/Makefile
++++ b/Makefile
+@@ -34,8 +34,9 @@ hsetroot: hsetroot.o
+ hsr-outputs: hsr-outputs.o
+ 
+ install: hsetroot hsr-outputs
+-	install -st $(PREFIX)/bin/ hsetroot
+-	install -st $(PREFIX)/bin/ hsr-outputs
++	install -d $(DESTDIR)$(PREFIX)/bin
++	install -t $(DESTDIR)$(PREFIX)/bin/ hsetroot
++	install -t $(DESTDIR)$(PREFIX)/bin/ hsr-outputs
+ 
+ clean:
+ 	rm -f *.o hsetroot hsr-outputs
