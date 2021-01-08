@@ -12,7 +12,7 @@ DESCRIPTION="deemix is a deezer downloader built from the ashes of Deezloader Re
 HOMEPAGE="https://git.rip/RemixDev/deemix"
 SRC_URI="https://git.rip/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
