@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>cabinetto@protonmail.com</email>
-		<name>Daniel Kemmerich</email>
+		<name>Daniel Kemmerich</name>
 	</maintainer>
 	<longdescription>
 		A wrapper for all Deezer's APIs
