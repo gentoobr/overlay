@@ -10,11 +10,18 @@ COMMIT="44eeb3e28eef965151e513dbd9176624b9de42a1"
 
 DESCRIPTION="deemix is a deezer downloader built from the ashes of Deezloader Remix."
 HOMEPAGE="https://git.rip/RemixDev/deemix"
-SRC_URI="https://git.rip/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
+
+if [[ ${PV} = *9999* ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://git.rip/RemixDev/${PN}"
+else
+	SRC_URI="https://git.rip/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+	S="${WORKDIR}/${PN}-${COMMIT}"
+fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	>=dev-python/spotipy-2.11.0
@@ -27,7 +34,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
-S="${WORKDIR}/${PN}-${COMMIT}"
+
 
 python_prepare(){
 	# Deemix by default uses pycryptodomex, which will be removed from the
