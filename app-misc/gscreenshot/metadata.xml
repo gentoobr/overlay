@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xerxeslins@gmail.com</email>
+		<name>Xerxes Lins</name>
+	</maintainer>
+	<longdescription lang="en">
+		gscreenshot is a gtk frontend for scrot, an application for taking screenshots, written in python and pygtk.
+	</longdescription>
+	<longdescription lang="pt">
+		gscreenshot é um frontend gtk para scrot, um aplicativo para tirar screenshots, escrito em python e pygtk.				 
+	</longdescription>
+</pkgmetadata>
