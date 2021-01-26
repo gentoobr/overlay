@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>cassioavila@yandex.com</email>
+		<name>Cássio Ribeiro Alves de Ávila</name>
+	</maintainer>
+	<longdescription lang="en">
+	  The goal of this project is to implement a simple system information tool in POSIX
+	  sh using features built into the language itself (where possible).
+	</longdescription>
+	<longdescription lang="pt">
+	  O objetivo desse projeto é implementar uma ferramenta simples de informações do sistema
+	  em sh POSIX usando funcionalidades incorporadas na própria linguagem.
+	</longdescription>
+</pkgmetadata>
