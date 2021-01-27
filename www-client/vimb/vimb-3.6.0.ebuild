@@ -19,7 +19,7 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE="gstreamer adblock"
 
-DEPEND="
+RDEPEND="
 	gstreamer? (
 		net-libs/webkit-gtk[gstreamer]
 		media-libs/gst-plugins-good
@@ -30,10 +30,11 @@ DEPEND="
 	adblock? ( www-plugins/wyebadblock )
 "
 
-RDEPEND="
-	${DEPEND}
+DEPEND="
+	${RDEPEND}
 	virtual/pkgconfig
 "
+
 src_prepare() {
 	default
 	sed -i '/Icon/s/$/browser/' vimb.desktop
