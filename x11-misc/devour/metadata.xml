@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer type="person">
-		<email>cassioavila@yandex.com</email>
-		<name>Cássio Ribeiro Alves de Ávila</name>
-	</maintainer>
-	<longdescription lang="en">
-	  Devour hides your current window before launching an external program and unhides it after quitting.
-	</longdescription>
-	<longdescription lang="pt">
-	  Devour esconde a janela atual antes de executar um programa externo, e a revela após fechar.
-	</longdescription>
+  <maintainer type="person">
+    <email>cassioavila@yandex.com</email>
+    <name>Cássio Ribeiro Alves de Ávila</name>
+  </maintainer>
+  <longdescription lang="en">
+    Devour hides your current window before launching an external program and unhides it after quitting.
+  </longdescription>
+  <longdescription lang="pt">
+    Devour esconde a janela atual antes de executar um programa externo, e a revela após fechar.
+  </longdescription>
 </pkgmetadata>
