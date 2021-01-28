@@ -17,4 +17,9 @@
 		lf (como em "list files") é um gerenciador de arquivos no terminal escrito em go. Ele é pesadamente inspirado no ranger, com alguns recursos 
 		extras e outros faltando. Alguns dos recursos faltando são deliberadamente omitidos, desde que eles são tratados melhores por ferramentas externas.
 	</longdescription>
+	<use>
+		<flag name="fish-completion">
+			Installs completion for fish
+		</flag>
+	</use>
 </pkgmetadata>
