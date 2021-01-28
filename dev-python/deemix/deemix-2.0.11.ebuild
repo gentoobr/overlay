@@ -35,7 +35,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-
 python_prepare(){
 	# Deemix by default uses pycryptodomex, which will be removed from the
 	# Portage tree. As they are basically drop-in replacements, I just use
