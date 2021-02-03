@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>leonardohn@null.net</email>
+		<name>Leonardo Neumann</name>
+	</maintainer>
+	<longdescription lang="en">
+		Wofi is a launcher/menu program for wlroots based wayland compositors such as sway.
+	</longdescription>
+	<upstream>
+		<doc>https://cloudninja.pw/docs/wofi.html</doc>
+	</upstream>
+</pkgmetadata>
