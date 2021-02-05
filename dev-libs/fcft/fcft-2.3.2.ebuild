@@ -22,14 +22,24 @@ SLOT="0"
 IUSE="+harfbuzz"
 
 DEPEND="
-	dev-libs/tllist
+	>=dev-libs/tllist-1.0.1
 	media-libs/fontconfig
 	media-libs/freetype
 	harfbuzz? ( media-libs/harfbuzz )
 	x11-libs/pixman
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+	app-text/scdoc
+	virtual/pkgconfig
+"
+
+src_configure() {
+	local emesonargs=(
+		$(meson_feature harfbuzz text-shaping)
+	)
+	meson_src_configure
+}
 
 src_install() {
 	meson_src_install
