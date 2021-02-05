@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit meson
+inherit eutils meson
 
 DESCRIPTION="A simple library for font loading and glyph rasterization"
 HOMEPAGE="https://codeberg.org/dnkl/fcft"
@@ -19,7 +19,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="+harfbuzz"
+IUSE="+harfbuzz static-libs"
 
 DEPEND="
 	>=dev-libs/tllist-1.0.1
@@ -36,6 +36,7 @@ BDEPEND="
 
 src_configure() {
 	local emesonargs=(
+		-Ddefault_library=$(usex static-libs both shared)
 		$(meson_feature harfbuzz text-shaping)
 	)
 	meson_src_configure
