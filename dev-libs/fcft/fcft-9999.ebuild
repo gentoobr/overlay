@@ -21,14 +21,16 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="+harfbuzz static-libs"
 
-DEPEND="
-	>=dev-libs/tllist-1.0.1
+RDEPEND="
 	media-libs/fontconfig
 	media-libs/freetype
 	harfbuzz? ( media-libs/harfbuzz )
 	x11-libs/pixman
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	${RDEPEND}
+	>=dev-libs/tllist-1.0.1
+"
 BDEPEND="
 	app-text/scdoc
 	virtual/pkgconfig
