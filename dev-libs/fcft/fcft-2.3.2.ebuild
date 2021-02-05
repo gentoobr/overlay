@@ -33,6 +33,7 @@ DEPEND="
 "
 BDEPEND="
 	app-text/scdoc
+	>=dev-util/meson-0.54.0
 	virtual/pkgconfig
 "
 
@@ -40,6 +41,7 @@ src_configure() {
 	local emesonargs=(
 		-Ddefault_library=$(usex static-libs both shared)
 		$(meson_feature harfbuzz text-shaping)
+		-Dwerror=false
 	)
 	meson_src_configure
 }
