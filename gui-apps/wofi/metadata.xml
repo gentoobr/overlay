@@ -6,7 +6,7 @@
 		<name>Leonardo Neumann</name>
 	</maintainer>
 	<longdescription lang="en">
-		Wofi is a launcher/menu program for wlroots based wayland compositors such as sway.
+		A launcher/menu program for wlroots based wayland compositors
 	</longdescription>
 	<upstream>
 		<doc>https://cloudninja.pw/docs/wofi.html</doc>

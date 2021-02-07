@@ -8,7 +8,7 @@
 	<longdescription lang="en">
 		A simple library for font loading and glyph rasterization
 	</longdescription>
-    <use>
+	<use>
 		<flag name="harfbuzz">Enables text shaping via media-libs/harfbuzz</flag>
 	</use>
 	<upstream>
