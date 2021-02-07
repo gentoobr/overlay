@@ -33,7 +33,7 @@ RDEPEND="
 	x11-libs/pixman
 	wayland? ( dev-libs/wayland )
 	X? (
-		x11-libs/libxcb:0=
+		x11-libs/libxcb:0=[xkb]
 		x11-libs/xcb-util
 		x11-libs/xcb-util-cursor
 		x11-libs/xcb-util-wm
@@ -47,6 +47,10 @@ BDEPEND="
 	app-text/scdoc
 	>=dev-util/meson-0.53.0
 	virtual/pkgconfig
+	wayland? (
+		dev-libs/wayland-protocols
+		dev-util/wayland-scanner
+	)
 "
 
 src_configure() {
