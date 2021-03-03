@@ -24,7 +24,7 @@ IUSE="wayland X"
 REQUIRED_USE="|| ( wayland X )"
 
 RDEPEND="
-	=dev-libs/fcft-2*
+	=media-libs/fcft-2*
 	dev-libs/json-c
 	dev-libs/libyaml
 	media-libs/alsa-lib
