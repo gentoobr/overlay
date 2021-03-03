@@ -7,7 +7,7 @@ inherit cargo
 
 CRATES="
 addr2line-0.14.1
-adler-0.2.3
+adler-1.0.1
 always-assert-0.1.2
 ansi_term-0.12.1
 anyhow-1.0.38
@@ -32,8 +32,8 @@ countme-2.0.4
 crc32fast-1.2.1
 crossbeam-channel-0.5.0
 crossbeam-deque-0.8.0
-crossbeam-epoch-0.9.2
-crossbeam-utils-0.8.2
+crossbeam-epoch-0.9.3
+crossbeam-utils-0.8.3
 dashmap-4.0.2
 dissimilar-1.0.2
 drop_bomb-0.1.5
@@ -49,7 +49,6 @@ fs_extra-1.2.0
 fsevent-2.0.2
 fsevent-sys-3.0.2
 fst-0.4.5
-generator-0.6.24
 gimli-0.23.0
 hashbrown-0.9.1
 heck-0.3.2
@@ -73,7 +72,6 @@ libloading-0.7.0
 libmimalloc-sys-0.1.20
 lock_api-0.4.2
 log-0.4.14
-loom-0.4.0
 lsp-server-0.5.0
 lsp-types-0.88.0
 matchers-0.0.1
@@ -82,8 +80,8 @@ memchr-2.3.4
 memmap2-0.2.1
 memoffset-0.6.1
 mimalloc-0.1.24
-miniz_oxide-0.4.3
-mio-0.7.8
+miniz_oxide-0.4.4
+mio-0.7.9
 miow-0.3.6
 notify-5.0.0-pre.6
 ntapi-0.3.6
@@ -91,7 +89,7 @@ num-integer-0.1.44
 num-traits-0.2.14
 num_cpus-1.13.0
 object-0.23.0
-once_cell-1.5.2
+once_cell-1.7.0
 oorandom-11.1.3
 parking_lot-0.11.1
 parking_lot_core-0.8.3
@@ -116,10 +114,9 @@ regex-1.4.3
 regex-automata-0.1.9
 regex-syntax-0.6.22
 rowan-0.12.6
-rustc-ap-rustc_lexer-707.0.0
+rustc-ap-rustc_lexer-708.0.0
 rustc-demangle-0.1.18
 rustc-hash-1.1.0
-rustversion-1.0.4
 ryu-1.0.5
 salsa-0.16.0
 salsa-macros-0.16.0
@@ -143,16 +140,15 @@ termcolor-1.1.2
 text-size-1.1.0
 thread_local-1.1.3
 threadpool-1.8.1
-time-0.1.44
 tinyvec-1.1.1
 tinyvec_macros-0.1.0
-tracing-0.1.24
+tracing-0.1.25
 tracing-attributes-0.1.13
 tracing-core-0.1.17
 tracing-log-0.1.2
 tracing-serde-0.1.2
 tracing-subscriber-0.2.16
-tracing-tree-0.1.7
+tracing-tree-0.1.8
 ucd-trie-0.1.3
 ungrammar-1.11.0
 unicase-2.6.0
@@ -163,7 +159,6 @@ unicode-xid-0.2.1
 url-2.2.1
 version_check-0.9.2
 walkdir-2.3.1
-wasi-0.10.0+wasi-snapshot-preview1
 winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
