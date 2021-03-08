@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +7,7 @@ inherit cargo
 
 CRATES="
 addr2line-0.14.1
-adler-1.0.1
+adler-1.0.2
 always-assert-0.1.2
 ansi_term-0.12.1
 anyhow-1.0.38
@@ -18,14 +18,15 @@ autocfg-1.0.1
 backtrace-0.3.56
 bitflags-1.2.1
 byteorder-1.4.2
+camino-1.0.2
 cargo-platform-0.1.1
-cargo_metadata-0.12.3
+cargo_metadata-0.13.1
 cc-1.0.67
 cfg-if-1.0.0
-chalk-derive-0.58.0
-chalk-ir-0.58.0
-chalk-recursive-0.58.0
-chalk-solve-0.58.0
+chalk-derive-0.59.0
+chalk-ir-0.59.0
+chalk-recursive-0.59.0
+chalk-solve-0.59.0
 chrono-0.4.19
 cmake-0.1.45
 countme-2.0.4
@@ -60,14 +61,13 @@ inotify-0.9.2
 inotify-sys-0.1.5
 instant-0.1.9
 itertools-0.10.0
-itertools-0.9.0
 itoa-0.4.7
 jemalloc-ctl-0.3.3
 jemalloc-sys-0.3.2
 jemallocator-0.3.2
 jod-thread-0.1.2
 lazy_static-1.4.0
-libc-0.2.86
+libc-0.2.88
 libloading-0.7.0
 libmimalloc-sys-0.1.20
 lock_api-0.4.2
@@ -89,7 +89,7 @@ num-integer-0.1.44
 num-traits-0.2.14
 num_cpus-1.13.0
 object-0.23.0
-once_cell-1.7.0
+once_cell-1.7.2
 oorandom-11.1.3
 parking_lot-0.11.1
 parking_lot_core-0.8.3
@@ -100,8 +100,7 @@ perf-event-0.4.6
 perf-event-open-sys-1.0.1
 pest-2.1.3
 petgraph-0.5.1
-pico-args-0.4.0
-pin-project-lite-0.2.4
+pin-project-lite-0.2.6
 proc-macro-hack-0.5.19
 proc-macro2-1.0.24
 pulldown-cmark-0.8.0
@@ -114,7 +113,7 @@ regex-1.4.3
 regex-automata-0.1.9
 regex-syntax-0.6.22
 rowan-0.12.6
-rustc-ap-rustc_lexer-708.0.0
+rustc-ap-rustc_lexer-709.0.0
 rustc-demangle-0.1.18
 rustc-hash-1.1.0
 ryu-1.0.5
@@ -127,14 +126,14 @@ semver-0.11.0
 semver-parser-0.10.2
 serde-1.0.123
 serde_derive-1.0.123
-serde_json-1.0.62
+serde_json-1.0.64
 serde_path_to_error-0.1.4
 serde_repr-0.1.6
 sharded-slab-0.1.1
 smallvec-1.6.1
 smol_str-0.1.17
 socket2-0.3.19
-syn-1.0.60
+syn-1.0.61
 synstructure-0.12.4
 termcolor-1.1.2
 text-size-1.1.0
@@ -164,8 +163,10 @@ winapi-i686-pc-windows-gnu-0.4.0
 winapi-util-0.1.5
 winapi-x86_64-pc-windows-gnu-0.4.0
 write-json-0.1.2
-xshell-0.1.8
-xshell-macros-0.1.8
+xflags-0.2.1
+xflags-macros-0.2.1
+xshell-0.1.9
+xshell-macros-0.1.9
 "
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
@@ -181,7 +182,7 @@ fi
 DESCRIPTION="An experimental Rust compiler front-end for IDEs"
 HOMEPAGE="https://rust-analyzer.github.io"
 
-LICENSE="BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
+LICENSE="BSD Apache-2.0 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
 RESTRICT="mirror"
 SLOT="0"
 IUSE=""
