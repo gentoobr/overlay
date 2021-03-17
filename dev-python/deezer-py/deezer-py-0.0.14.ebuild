@@ -10,15 +10,15 @@ COMMIT="7d79211056c816b381dfdd4ac1c68492b0dbb336"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://git.rip/RemixDev/${PN}"
+	EGIT_REPO_URI="https://gitlab.com/RemixDev/${PN}"
 else
-	SRC_URI="https://git.rip/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://gitlab.com/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN}-${COMMIT}"
 fi
 
 DESCRIPTION="A wrapper for all Deezer's APIs"
-HOMEPAGE="https://git.rip/RemixDev/deezer-py"
+HOMEPAGE="https://gitlab.com/RemixDev/deezer-py"
 
 LICENSE="GPL-3"
 SLOT="0"
