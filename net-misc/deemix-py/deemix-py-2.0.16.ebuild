@@ -9,7 +9,7 @@ inherit distutils-r1
 COMMIT="67fcb7d37f0cd24564b7ff2738cd5e69551edc6d"
 
 DESCRIPTION="deemix is a deezer downloader built from the ashes of Deezloader Remix."
-HOMEPAGE="https://git.freezer.life/RemixDev/deemix"
+HOMEPAGE="https://git.freezer.life/RemixDev/deemix-py"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -17,7 +17,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="https://git.freezer.life/RemixDev/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${PN}-${COMMIT}"
+	S="${WORKDIR}/${COMMIT}"
 fi
 
 LICENSE="GPL-3"
