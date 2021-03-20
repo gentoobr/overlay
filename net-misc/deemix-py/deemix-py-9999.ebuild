@@ -6,16 +6,16 @@ EAPI=7
 PYTHON_COMPAT=( python3_8 )
 inherit distutils-r1
 
-COMMIT="44eeb3e28eef965151e513dbd9176624b9de42a1"
+COMMIT="67fcb7d37f0cd24564b7ff2738cd5e69551edc6d"
 
 DESCRIPTION="deemix is a deezer downloader built from the ashes of Deezloader Remix."
-HOMEPAGE="https://git.rip/RemixDev/deemix"
+HOMEPAGE="https://git.freezer.life/RemixDev/deemix"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://git.rip/RemixDev/${PN}"
+	EGIT_REPO_URI="https://git.freezer.life/RemixDev/${PN}"
 else
-	SRC_URI="https://git.rip/RemixDev/${PN}/-/archive/${COMMIT}/${PN}-${COMMIT}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://git.freezer.life/RemixDev/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN}-${COMMIT}"
 fi
