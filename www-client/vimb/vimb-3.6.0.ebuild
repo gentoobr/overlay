@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -49,7 +49,7 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 
 	if use adblock; then
-		ln -s /usr/lib/wyebrowser/adblock.so "${D}"/usr/lib/vimb/adblock.so
+		dosym ../wyebrowser/adblock.so /usr/lib/vimb/adblock.so
 	fi
 
 	save_config "${WORKDIR}"/"${P}"/src/config.h
