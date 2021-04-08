@@ -10,9 +10,9 @@ addr2line-0.14.1
 adler-1.0.2
 always-assert-0.1.2
 ansi_term-0.12.1
-anyhow-1.0.39
+anyhow-1.0.40
 anymap-0.12.1
-arrayvec-0.6.0
+arrayvec-0.6.1
 atty-0.2.14
 autocfg-1.0.1
 backtrace-0.3.56
@@ -67,10 +67,10 @@ jemalloc-sys-0.3.2
 jemallocator-0.3.2
 jod-thread-0.1.2
 lazy_static-1.4.0
-libc-0.2.91
+libc-0.2.92
 libloading-0.7.0
 libmimalloc-sys-0.1.21
-lock_api-0.4.2
+lock_api-0.4.3
 log-0.4.14
 lsp-server-0.5.0
 lsp-types-0.88.0
@@ -79,7 +79,7 @@ matches-0.1.8
 memchr-2.3.4
 memmap-0.7.0
 memmap2-0.2.1
-memoffset-0.6.1
+memoffset-0.6.3
 mimalloc-0.1.25
 miniz_oxide-0.4.4
 mio-0.7.11
@@ -103,7 +103,7 @@ pest-2.1.3
 petgraph-0.5.1
 pin-project-lite-0.2.6
 proc-macro-hack-0.5.19
-proc-macro2-1.0.24
+proc-macro2-1.0.26
 pulldown-cmark-0.8.0
 pulldown-cmark-to-cmark-6.0.0
 quote-1.0.9
@@ -134,7 +134,7 @@ sharded-slab-0.1.1
 smallvec-1.6.1
 smol_str-0.1.17
 snap-1.0.4
-syn-1.0.64
+syn-1.0.68
 synstructure-0.12.4
 termcolor-1.1.2
 text-size-1.1.0
