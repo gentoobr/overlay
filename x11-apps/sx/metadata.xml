@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>cassioavila@yandex.com</email>
+		<name>Cássio</name>
+	</maintainer>
+	<longdescription lang="en">
+		sx is a simple alternative to both xinit(1) and startx(1) for starting
+		an Xorg server.
+	</longdescription>
+	<longdescription lang="pt">
+		sx é uma alternativa mais simples para ambos xinit(1) e startx(1) para
+		iniciar o Xorg server.
+	</longdescription>
+</pkgmetadata>
