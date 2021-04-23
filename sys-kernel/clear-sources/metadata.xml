@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>cassioavila@yandex.com</email>
+		<name>Cássio Ribeiro Alves de Ávila</name>
+	</maintainer>
+	<maintainer type="person">
+		<email>leonardohn@null.net</email>
+		<name>Leonardo H. Neumann</name>
+	</maintainer>
+	<use>
+		<flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
+	</use>
+</pkgmetadata>
