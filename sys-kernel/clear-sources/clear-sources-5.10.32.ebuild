@@ -1,4 +1,4 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -26,12 +26,7 @@ UNIPATCH_EXCLUDE="archive/* ${UNIPATCH_EXCLUDE}"
 UNIPATCH_LIST="${DISTDIR}/${CLEAR_VER}.tar.gz"
 UNIPATCH_STRICTORDER="yes"
 
-pkg_setup() {
-	kernel-2_pkg_setup
-	einfo
-	einfo "For the default configuration used on Clear Linux, see ${HOMEPAGE}"
-	einfo
-}
+K_EXTRAEINFO="For the default configuration used on Clear Linux, see ${HOMEPAGE}"
 
 pkg_postrm() {
 	kernel-2_pkg_postrm
