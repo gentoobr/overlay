@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>cassioavila@yandex.com</email>
+		<name>Cássio Ribeiro Alves de Ávila</name>
+	</maintainer>
+	<longdescription lang="en">
+		smu is a very simple and minimal markup language. It is designed for use in
+		wiki-like environments. smu makes it very easy to write your documents on the
+		fly and convert them into HTML.
+	</longdescription>
+</pkgmetadata>
