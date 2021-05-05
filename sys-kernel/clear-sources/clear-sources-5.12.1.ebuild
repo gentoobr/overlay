@@ -6,8 +6,8 @@ ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="35"
-CLEAR_VER="${PV}-1034"
+K_GENPATCHES_VER="2"
+CLEAR_VER="${PV}-1038"
 
 inherit kernel-2
 detect_version
