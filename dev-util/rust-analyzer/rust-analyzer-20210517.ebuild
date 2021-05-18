@@ -37,6 +37,7 @@ CRATES="
 	crossbeam-utils-0.8.4
 	dashmap-4.0.2
 	dissimilar-1.0.2
+	dot-0.1.4
 	drop_bomb-0.1.5
 	either-1.6.1
 	ena-0.14.0
@@ -62,9 +63,6 @@ CRATES="
 	instant-0.1.9
 	itertools-0.10.0
 	itoa-0.4.7
-	jemalloc-ctl-0.3.3
-	jemalloc-sys-0.3.2
-	jemallocator-0.3.2
 	jod-thread-0.1.2
 	lazy_static-1.4.0
 	libc-0.2.94
@@ -77,7 +75,6 @@ CRATES="
 	matchers-0.0.1
 	matches-0.1.8
 	memchr-2.4.0
-	memmap-0.7.0
 	memmap2-0.2.2
 	memoffset-0.6.3
 	mimalloc-0.1.25
@@ -113,12 +110,12 @@ CRATES="
 	regex-1.5.3
 	regex-automata-0.1.9
 	regex-syntax-0.6.25
-	rowan-0.13.0-pre.3
+	rowan-0.13.0-pre.6
 	rustc-ap-rustc_lexer-716.0.0
 	rustc-demangle-0.1.18
 	rustc-hash-1.1.0
 	ryu-1.0.5
-	salsa-0.16.0
+	salsa-0.16.1
 	salsa-macros-0.16.0
 	same-file-1.0.6
 	scoped-tls-1.0.0
@@ -140,6 +137,9 @@ CRATES="
 	text-size-1.1.0
 	thread_local-1.1.3
 	threadpool-1.8.1
+	tikv-jemalloc-ctl-0.4.1
+	tikv-jemalloc-sys-0.4.1+5.2.1-patched
+	tikv-jemallocator-0.4.1
 	tinyvec-1.2.0
 	tinyvec_macros-0.1.0
 	tracing-0.1.26
