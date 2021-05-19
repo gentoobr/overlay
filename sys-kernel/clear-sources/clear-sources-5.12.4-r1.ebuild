@@ -6,8 +6,8 @@ ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="35"
-CLEAR_VER="${PV}-1036"
+K_GENPATCHES_VER="4"
+CLEAR_VER="${PV}-1040"
 
 inherit kernel-2
 detect_version
@@ -22,7 +22,12 @@ DESCRIPTION="Clear Linux sources"
 CLEAR_URI="https://github.com/clearlinux-pkgs/linux/archive/refs/tags/${CLEAR_VER}.tar.gz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CLEAR_URI}"
 
-UNIPATCH_EXCLUDE="archive/* ${UNIPATCH_EXCLUDE}"
+UNIPATCH_EXCLUDE="archive/*
+	0124-x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+	0125-x86-microcode-echo-2-reload-to-force-load-ucode.patch
+	0126-fix-bug-in-ucode-force-reload-revision-check.patch
+	${UNIPATCH_EXCLUDE}"
+
 UNIPATCH_LIST="${DISTDIR}/${CLEAR_VER}.tar.gz"
 UNIPATCH_STRICTORDER="yes"
 
