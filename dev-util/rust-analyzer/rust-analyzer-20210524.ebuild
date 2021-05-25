@@ -37,6 +37,7 @@ CRATES="
 	crossbeam-utils-0.8.4
 	dashmap-4.0.2
 	dissimilar-1.0.2
+	dot-0.1.4
 	drop_bomb-0.1.5
 	either-1.6.1
 	ena-0.14.0
@@ -48,8 +49,8 @@ CRATES="
 	form_urlencoded-1.0.1
 	fs_extra-1.2.0
 	fsevent-2.0.2
-	fsevent-sys-3.0.2
-	fst-0.4.5
+	fsevent-sys-3.1.0
+	fst-0.4.6
 	gimli-0.23.0
 	hashbrown-0.9.1
 	heck-0.3.2
@@ -80,7 +81,7 @@ CRATES="
 	miniz_oxide-0.4.4
 	mio-0.7.11
 	miow-0.3.7
-	notify-5.0.0-pre.7
+	notify-5.0.0-pre.8
 	ntapi-0.3.6
 	num-integer-0.1.44
 	num-traits-0.2.14
@@ -109,7 +110,7 @@ CRATES="
 	regex-1.5.3
 	regex-automata-0.1.9
 	regex-syntax-0.6.25
-	rowan-0.13.0-pre.5
+	rowan-0.13.0-pre.6
 	rustc-ap-rustc_lexer-716.0.0
 	rustc-demangle-0.1.18
 	rustc-hash-1.1.0
