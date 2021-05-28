@@ -6,8 +6,8 @@ ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="2"
-CLEAR_VER="${PV}-1039"
+K_GENPATCHES_VER="8"
+CLEAR_VER="${PV}-1044"
 
 inherit kernel-2
 detect_version
@@ -22,11 +22,7 @@ DESCRIPTION="Clear Linux sources"
 CLEAR_URI="https://github.com/clearlinux-pkgs/linux/archive/refs/tags/${CLEAR_VER}.tar.gz"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CLEAR_URI}"
 
-UNIPATCH_EXCLUDE="archive/*
-	0112-kernel-time-reduce-ntp-wakeups.patch
-	0118-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-	0121-do-accept-in-LIFO-order-for-cache-efficiency.patch
-	${UNIPATCH_EXCLUDE}"
+UNIPATCH_EXCLUDE="archive/* ${UNIPATCH_EXCLUDE}"
 
 UNIPATCH_LIST="${DISTDIR}/${CLEAR_VER}.tar.gz"
 UNIPATCH_STRICTORDER="yes"
