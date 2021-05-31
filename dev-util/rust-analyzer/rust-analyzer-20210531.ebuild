@@ -182,7 +182,7 @@ fi
 DESCRIPTION="An experimental Rust compiler front-end for IDEs"
 HOMEPAGE="https://rust-analyzer.github.io"
 
-LICENSE="BSD Apache-2.0 Artistic-2.0 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
+LICENSE="BSD Apache-2.0 Artistic-2 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
 RESTRICT="mirror"
 SLOT="0"
 IUSE=""
