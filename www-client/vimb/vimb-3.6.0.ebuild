@@ -41,10 +41,6 @@ src_prepare() {
 	restore_config "${WORKDIR}"/"${P}"/src/config.h
 }
 
-src_compile() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
-}
-
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 
