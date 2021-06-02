@@ -38,6 +38,7 @@ DEPEND="
 src_prepare() {
 	default
 	sed -i '/Icon/s/$/browser/' vimb.desktop
+	sed -i '/PREFIX/s:/local::' config.mk
 	restore_config "${WORKDIR}"/"${P}"/src/config.h
 }
 
