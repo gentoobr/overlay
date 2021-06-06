@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_8 )
+PYTHON_COMPAT=( python3_{8,9} )
 inherit distutils-r1
 
 COMMIT="67fcb7d37f0cd24564b7ff2738cd5e69551edc6d"
@@ -17,7 +17,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="https://git.freezer.life/RemixDev/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${COMMIT}"
+	S="${WORKDIR}/${PN}"
 fi
 
 LICENSE="GPL-3"
