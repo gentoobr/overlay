@@ -45,3 +45,8 @@ python_prepare(){
 	sed -i 's/Cryptodome/Crypto/' deemix/app/downloadjob.py
 	sed -i 's/Cryptodome/Crypto/' deemix/utils/decryption.py
 }
+
+pkg_postinst(){
+	ewarn "Please notice that deemix-py will not work with deezer-py-9999"
+	ewarn "Make sure to install deezer-py version 0.0.15 or earlier."
+}
