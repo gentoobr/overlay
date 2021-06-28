@@ -6,18 +6,17 @@ EAPI=7
 inherit cargo
 
 CRATES="
-	addr2line-0.15.1
+	addr2line-0.15.2
 	adler-1.0.2
 	always-assert-0.1.2
 	ansi_term-0.12.1
-	anyhow-1.0.40
+	anyhow-1.0.41
 	anymap-0.12.1
-	arrayvec-0.7.0
+	arrayvec-0.7.1
 	atty-0.2.14
 	autocfg-1.0.1
-	backtrace-0.3.59
+	backtrace-0.3.60
 	bitflags-1.2.1
-	byteorder-1.4.3
 	camino-1.0.4
 	cargo-platform-0.1.1
 	cargo_metadata-0.13.1
@@ -27,7 +26,6 @@ CRATES="
 	chalk-ir-0.68.0
 	chalk-recursive-0.68.0
 	chalk-solve-0.68.0
-	chrono-0.4.19
 	countme-2.0.4
 	cov-mark-2.0.0-pre.1
 	crc32fast-1.2.1
@@ -41,7 +39,7 @@ CRATES="
 	drop_bomb-0.1.5
 	either-1.6.1
 	ena-0.14.0
-	env_logger-0.8.3
+	env_logger-0.8.4
 	expect-test-1.1.0
 	filetime-0.2.14
 	fixedbitset-0.2.0
@@ -49,10 +47,10 @@ CRATES="
 	form_urlencoded-1.0.1
 	fs_extra-1.2.0
 	fsevent-sys-4.0.0
-	fst-0.4.6
+	fst-0.4.7
 	gimli-0.24.0
 	hashbrown-0.9.1
-	heck-0.3.2
+	heck-0.3.3
 	hermit-abi-0.1.18
 	home-0.5.3
 	idna-0.2.3
@@ -60,33 +58,31 @@ CRATES="
 	inotify-0.9.3
 	inotify-sys-0.1.5
 	instant-0.1.9
-	itertools-0.10.0
+	itertools-0.10.1
 	itoa-0.4.7
 	jod-thread-0.1.2
 	lazy_static-1.4.0
 	libc-0.2.97
 	libloading-0.7.0
-	libmimalloc-sys-0.1.21
+	libmimalloc-sys-0.1.22
 	lock_api-0.4.4
 	log-0.4.14
 	lsp-server-0.5.1
-	lsp-types-0.89.1
+	lsp-types-0.89.2
 	matchers-0.0.1
 	matches-0.1.8
 	memchr-2.4.0
-	memmap2-0.2.3
+	memmap2-0.3.0
 	memoffset-0.6.4
-	mimalloc-0.1.25
+	mimalloc-0.1.26
 	miniz_oxide-0.4.4
-	mio-0.7.11
+	mio-0.7.13
 	miow-0.3.7
-	notify-5.0.0-pre.9
+	notify-5.0.0-pre.10
 	ntapi-0.3.6
-	num-integer-0.1.44
-	num-traits-0.2.14
 	num_cpus-1.13.0
-	object-0.24.0
-	once_cell-1.7.2
+	object-0.25.3
+	once_cell-1.8.0
 	oorandom-11.1.3
 	parking_lot-0.11.1
 	parking_lot_core-0.8.3
@@ -101,17 +97,17 @@ CRATES="
 	proc-macro-hack-0.5.19
 	proc-macro2-1.0.27
 	pulldown-cmark-0.8.0
-	pulldown-cmark-to-cmark-6.0.0
+	pulldown-cmark-to-cmark-6.0.1
 	quote-1.0.9
 	rayon-1.5.1
 	rayon-core-1.9.1
-	redox_syscall-0.2.8
+	redox_syscall-0.2.9
 	regex-1.5.4
-	regex-automata-0.1.9
+	regex-automata-0.1.10
 	regex-syntax-0.6.25
 	rowan-0.13.0-pre.6
 	rustc-ap-rustc_lexer-721.0.0
-	rustc-demangle-0.1.19
+	rustc-demangle-0.1.20
 	rustc-hash-1.1.0
 	ryu-1.0.5
 	salsa-0.17.0-pre.1
@@ -130,7 +126,7 @@ CRATES="
 	smallvec-1.6.1
 	smol_str-0.1.17
 	snap-1.0.5
-	syn-1.0.72
+	syn-1.0.73
 	synstructure-0.12.4
 	termcolor-1.1.2
 	text-size-1.1.0
@@ -145,14 +141,13 @@ CRATES="
 	tracing-attributes-0.1.15
 	tracing-core-0.1.18
 	tracing-log-0.1.2
-	tracing-serde-0.1.2
 	tracing-subscriber-0.2.18
 	tracing-tree-0.1.9
 	ucd-trie-0.1.3
-	ungrammar-1.14.0
+	ungrammar-1.14.1
 	unicase-2.6.0
 	unicode-bidi-0.3.5
-	unicode-normalization-0.1.18
+	unicode-normalization-0.1.19
 	unicode-segmentation-1.7.1
 	unicode-xid-0.2.2
 	url-2.2.2
@@ -163,8 +158,8 @@ CRATES="
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	write-json-0.1.2
-	xflags-0.2.1
-	xflags-macros-0.2.1
+	xflags-0.2.2
+	xflags-macros-0.2.2
 	xshell-0.1.14
 	xshell-macros-0.1.14
 "
