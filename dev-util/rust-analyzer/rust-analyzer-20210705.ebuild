@@ -6,7 +6,7 @@ EAPI=7
 inherit cargo
 
 CRATES="
-	addr2line-0.15.1
+	addr2line-0.15.2
 	adler-1.0.2
 	always-assert-0.1.2
 	ansi_term-0.12.1
@@ -15,9 +15,8 @@ CRATES="
 	arrayvec-0.7.1
 	atty-0.2.14
 	autocfg-1.0.1
-	backtrace-0.3.59
+	backtrace-0.3.60
 	bitflags-1.2.1
-	byteorder-1.4.3
 	camino-1.0.4
 	cargo-platform-0.1.1
 	cargo_metadata-0.13.1
@@ -50,12 +49,12 @@ CRATES="
 	fsevent-sys-4.0.0
 	fst-0.4.7
 	gimli-0.24.0
-	hashbrown-0.9.1
-	heck-0.3.2
-	hermit-abi-0.1.18
+	hashbrown-0.11.2
+	heck-0.3.3
+	hermit-abi-0.1.19
 	home-0.5.3
 	idna-0.2.3
-	indexmap-1.6.2
+	indexmap-1.7.0
 	inotify-0.9.3
 	inotify-sys-0.1.5
 	instant-0.1.9
@@ -68,21 +67,21 @@ CRATES="
 	libmimalloc-sys-0.1.22
 	lock_api-0.4.4
 	log-0.4.14
-	lsp-server-0.5.1
+	lsp-server-0.5.2
 	lsp-types-0.89.2
 	matchers-0.0.1
 	matches-0.1.8
 	memchr-2.4.0
-	memmap2-0.2.3
+	memmap2-0.3.0
 	memoffset-0.6.4
 	mimalloc-0.1.26
 	miniz_oxide-0.4.4
-	mio-0.7.11
+	mio-0.7.13
 	miow-0.3.7
-	notify-5.0.0-pre.9
+	notify-5.0.0-pre.10
 	ntapi-0.3.6
 	num_cpus-1.13.0
-	object-0.24.0
+	object-0.25.3
 	once_cell-1.8.0
 	oorandom-11.1.3
 	parking_lot-0.11.1
@@ -94,21 +93,21 @@ CRATES="
 	perf-event-open-sys-1.0.1
 	pest-2.1.3
 	petgraph-0.5.1
-	pin-project-lite-0.2.6
+	pin-project-lite-0.2.7
 	proc-macro-hack-0.5.19
 	proc-macro2-1.0.27
 	pulldown-cmark-0.8.0
-	pulldown-cmark-to-cmark-6.0.1
+	pulldown-cmark-to-cmark-6.0.2
 	quote-1.0.9
 	rayon-1.5.1
 	rayon-core-1.9.1
-	redox_syscall-0.2.8
+	redox_syscall-0.2.9
 	regex-1.5.4
-	regex-automata-0.1.9
+	regex-automata-0.1.10
 	regex-syntax-0.6.25
-	rowan-0.13.0-pre.6
+	rowan-0.13.0-pre.7
 	rustc-ap-rustc_lexer-721.0.0
-	rustc-demangle-0.1.19
+	rustc-demangle-0.1.20
 	rustc-hash-1.1.0
 	ryu-1.0.5
 	salsa-0.17.0-pre.1
@@ -125,9 +124,9 @@ CRATES="
 	serde_repr-0.1.7
 	sharded-slab-0.1.1
 	smallvec-1.6.1
-	smol_str-0.1.17
+	smol_str-0.1.18
 	snap-1.0.5
-	syn-1.0.72
+	syn-1.0.73
 	synstructure-0.12.4
 	termcolor-1.1.2
 	text-size-1.1.0
@@ -142,13 +141,13 @@ CRATES="
 	tracing-attributes-0.1.15
 	tracing-core-0.1.18
 	tracing-log-0.1.2
-	tracing-subscriber-0.2.18
+	tracing-subscriber-0.2.19
 	tracing-tree-0.1.9
 	ucd-trie-0.1.3
-	ungrammar-1.14.0
+	ungrammar-1.14.1
 	unicase-2.6.0
 	unicode-bidi-0.3.5
-	unicode-normalization-0.1.18
+	unicode-normalization-0.1.19
 	unicode-segmentation-1.7.1
 	unicode-xid-0.2.2
 	url-2.2.2
