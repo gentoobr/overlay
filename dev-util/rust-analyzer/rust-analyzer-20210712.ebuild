@@ -10,7 +10,7 @@ CRATES="
 	adler-1.0.2
 	always-assert-0.1.2
 	ansi_term-0.12.1
-	anyhow-1.0.41
+	anyhow-1.0.42
 	anymap-0.12.1
 	arrayvec-0.7.1
 	atty-0.2.14
@@ -19,13 +19,13 @@ CRATES="
 	bitflags-1.2.1
 	camino-1.0.4
 	cargo-platform-0.1.1
-	cargo_metadata-0.13.1
+	cargo_metadata-0.14.0
 	cc-1.0.68
 	cfg-if-1.0.0
-	chalk-derive-0.68.0
-	chalk-ir-0.68.0
-	chalk-recursive-0.68.0
-	chalk-solve-0.68.0
+	chalk-derive-0.69.0
+	chalk-ir-0.69.0
+	chalk-recursive-0.69.0
+	chalk-solve-0.69.0
 	countme-2.0.4
 	cov-mark-2.0.0-pre.1
 	crc32fast-1.2.1
@@ -49,12 +49,12 @@ CRATES="
 	fsevent-sys-4.0.0
 	fst-0.4.7
 	gimli-0.24.0
-	hashbrown-0.9.1
+	hashbrown-0.11.2
 	heck-0.3.3
-	hermit-abi-0.1.18
+	hermit-abi-0.1.19
 	home-0.5.3
 	idna-0.2.3
-	indexmap-1.6.2
+	indexmap-1.7.0
 	inotify-0.9.3
 	inotify-sys-0.1.5
 	instant-0.1.9
@@ -62,12 +62,12 @@ CRATES="
 	itoa-0.4.7
 	jod-thread-0.1.2
 	lazy_static-1.4.0
-	libc-0.2.97
+	libc-0.2.98
 	libloading-0.7.0
 	libmimalloc-sys-0.1.22
 	lock_api-0.4.4
 	log-0.4.14
-	lsp-server-0.5.1
+	lsp-server-0.5.2
 	lsp-types-0.89.2
 	matchers-0.0.1
 	matches-0.1.8
@@ -91,13 +91,12 @@ CRATES="
 	percent-encoding-2.1.0
 	perf-event-0.4.7
 	perf-event-open-sys-1.0.1
-	pest-2.1.3
 	petgraph-0.5.1
-	pin-project-lite-0.2.6
+	pin-project-lite-0.2.7
 	proc-macro-hack-0.5.19
 	proc-macro2-1.0.27
 	pulldown-cmark-0.8.0
-	pulldown-cmark-to-cmark-6.0.1
+	pulldown-cmark-to-cmark-6.0.2
 	quote-1.0.9
 	rayon-1.5.1
 	rayon-core-1.9.1
@@ -105,8 +104,8 @@ CRATES="
 	regex-1.5.4
 	regex-automata-0.1.10
 	regex-syntax-0.6.25
-	rowan-0.13.0-pre.6
-	rustc-ap-rustc_lexer-721.0.0
+	rowan-0.13.0-pre.7
+	rustc-ap-rustc_lexer-725.0.0
 	rustc-demangle-0.1.20
 	rustc-hash-1.1.0
 	ryu-1.0.5
@@ -115,8 +114,7 @@ CRATES="
 	same-file-1.0.6
 	scoped-tls-1.0.0
 	scopeguard-1.1.0
-	semver-0.11.0
-	semver-parser-0.10.2
+	semver-1.0.3
 	serde-1.0.126
 	serde_derive-1.0.126
 	serde_json-1.0.64
@@ -124,7 +122,7 @@ CRATES="
 	serde_repr-0.1.7
 	sharded-slab-0.1.1
 	smallvec-1.6.1
-	smol_str-0.1.17
+	smol_str-0.1.18
 	snap-1.0.5
 	syn-1.0.73
 	synstructure-0.12.4
@@ -141,14 +139,13 @@ CRATES="
 	tracing-attributes-0.1.15
 	tracing-core-0.1.18
 	tracing-log-0.1.2
-	tracing-subscriber-0.2.18
+	tracing-subscriber-0.2.19
 	tracing-tree-0.1.9
-	ucd-trie-0.1.3
 	ungrammar-1.14.1
 	unicase-2.6.0
 	unicode-bidi-0.3.5
 	unicode-normalization-0.1.19
-	unicode-segmentation-1.7.1
+	unicode-segmentation-1.8.0
 	unicode-xid-0.2.2
 	url-2.2.2
 	version_check-0.9.3
