@@ -20,7 +20,7 @@ CRATES="
 	camino-1.0.4
 	cargo-platform-0.1.1
 	cargo_metadata-0.14.0
-	cc-1.0.68
+	cc-1.0.69
 	cfg-if-1.0.0
 	chalk-derive-0.69.0
 	chalk-ir-0.69.0
@@ -39,7 +39,7 @@ CRATES="
 	drop_bomb-0.1.5
 	either-1.6.1
 	ena-0.14.0
-	env_logger-0.8.4
+	env_logger-0.9.0
 	expect-test-1.1.0
 	filetime-0.2.14
 	fixedbitset-0.2.0
@@ -57,10 +57,12 @@ CRATES="
 	indexmap-1.7.0
 	inotify-0.9.3
 	inotify-sys-0.1.5
-	instant-0.1.9
+	instant-0.1.10
 	itertools-0.10.1
 	itoa-0.4.7
 	jod-thread-0.1.2
+	kqueue-1.0.3
+	kqueue-sys-1.0.2
 	lazy_static-1.4.0
 	libc-0.2.98
 	libloading-0.7.0
@@ -78,7 +80,7 @@ CRATES="
 	miniz_oxide-0.4.4
 	mio-0.7.13
 	miow-0.3.7
-	notify-5.0.0-pre.10
+	notify-5.0.0-pre.11
 	ntapi-0.3.6
 	num_cpus-1.13.0
 	object-0.25.3
@@ -94,7 +96,7 @@ CRATES="
 	petgraph-0.5.1
 	pin-project-lite-0.2.7
 	proc-macro-hack-0.5.19
-	proc-macro2-1.0.27
+	proc-macro2-1.0.28
 	pulldown-cmark-0.8.0
 	pulldown-cmark-to-cmark-6.0.2
 	quote-1.0.9
@@ -124,8 +126,8 @@ CRATES="
 	smallvec-1.6.1
 	smol_str-0.1.18
 	snap-1.0.5
-	syn-1.0.73
-	synstructure-0.12.4
+	syn-1.0.74
+	synstructure-0.12.5
 	termcolor-1.1.2
 	text-size-1.1.0
 	thread_local-1.1.3
@@ -133,7 +135,7 @@ CRATES="
 	tikv-jemalloc-ctl-0.4.1
 	tikv-jemalloc-sys-0.4.1+5.2.1-patched
 	tikv-jemallocator-0.4.1
-	tinyvec-1.2.0
+	tinyvec-1.3.1
 	tinyvec_macros-0.1.0
 	tracing-0.1.26
 	tracing-attributes-0.1.15
@@ -141,7 +143,7 @@ CRATES="
 	tracing-log-0.1.2
 	tracing-subscriber-0.2.19
 	tracing-tree-0.1.9
-	ungrammar-1.14.1
+	ungrammar-1.14.2
 	unicase-2.6.0
 	unicode-bidi-0.3.5
 	unicode-normalization-0.1.19
@@ -155,8 +157,8 @@ CRATES="
 	winapi-util-0.1.5
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	write-json-0.1.2
-	xflags-0.2.2
-	xflags-macros-0.2.2
+	xflags-0.2.3
+	xflags-macros-0.2.3
 	xshell-0.1.14
 	xshell-macros-0.1.14
 "
