@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gazports@gmail.com</email>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<longdescription>
+		A lightweight Spotify terminal client, written in Rust. Works with Spotify Connect, and has both an interactive and CLI-based frontends.
+	</longdescription>
+</pkgmetadata>
