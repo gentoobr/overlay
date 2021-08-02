@@ -1,24 +1,23 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
-
-inherit cargo
+EAPI=8
 
 CRATES="
 "
 
-MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
+inherit cargo
 
 if [[ "${PV}" == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/rust-analyzer/rust-analyzer"
 else
 	KEYWORDS="~amd64"
+	MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
 	SRC_URI="https://github.com/rust-analyzer/rust-analyzer/archive/${MY_PV}.tar.gz -> ${P}.tar.gz $(cargo_crate_uris ${CRATES})"
 fi
 
-DESCRIPTION="An experimental Rust compiler front-end for IDEs"
+DESCRIPTION="An implementation of Language Server Protocol for the Rust programming language"
 HOMEPAGE="https://rust-analyzer.github.io"
 
 LICENSE="BSD Apache-2.0 Artistic-2 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
@@ -26,7 +25,7 @@ RESTRICT="mirror"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-lang/rust-1.46.0[rls]"
+DEPEND="|| ( >=dev-lang/rust-1.53.0[rls] >=dev-lang/rust-bin-1.53.0[rls] )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
