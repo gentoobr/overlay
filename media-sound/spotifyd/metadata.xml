@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gazports@gmail.com</email>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<longdescription>
+		A lightweight Spotify playing daemon, written in Rust. Requires a Spotify Premium account to use.
+		Integrates with Spotify Connect, allowing it to be controlled through other devices.
+	</longdescription>
+	<use>
+		<flag name="dbus">Enables multimedia key integration and keyring support</flag>
+		<flag name="systemd">Installs a .service file to /etc/systemd/user/</flag>
+		<flag name="pulseaudio">Enables the pulseaudio backend</flag>
+		<flag name="alsa">Enables the alsa backend</flag>
+		<flag name="portaudio">Enables the pulseaudio backend</flag>
+	</use>
+</pkgmetadata>
