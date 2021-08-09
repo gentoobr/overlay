@@ -20,7 +20,7 @@ fi
 DESCRIPTION="An implementation of Language Server Protocol for the Rust programming language"
 HOMEPAGE="https://rust-analyzer.github.io"
 
-LICENSE="BSD Apache-2.0 Artistic-2 Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
+LICENSE="0BSD Apache-2.0 Artistic-2 BSD Boost-1.0 CC0-1.0 ISC MIT Unlicense ZLIB"
 RESTRICT="mirror"
 SLOT="0"
 IUSE=""
