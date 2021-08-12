@@ -1,0 +1,13 @@
+Title: Yambar and rust-analyzer moved to GURU
+Author: Leonardo Neumann <leonardo@neumann.dev.br>
+Posted: 2021-08-12
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: gui-apps/yambar
+Display-If-Installed: dev-util/rust-analyzer
+
+On July 05, the gui-apps/yambar package was moved to the GURU overlay, mainly
+because all the dependencies are actively maintained there. Today we are also
+moving the dev-util/rust-analyzer package due to the request of some Gentoo
+IRC channel users, so it can serve as an alternative to the already available
+dev-util/rust-analyzer-bin package.
