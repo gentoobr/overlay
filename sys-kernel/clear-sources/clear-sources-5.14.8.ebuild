@@ -21,7 +21,7 @@ CLEAR_URI="https://github.com/clearlinux-pkgs/linux/archive/refs/tags/${CLEAR_VE
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CLEAR_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/${CLEAR_VER}.tar.gz"
-UNIPATCH_EXCLUDE="archive/* ${UNIPATCH_EXCLUDE}"
+UNIPATCH_EXCLUDE="archive/* 0113-print-fsync-count-for-bootchart.patch ${UNIPATCH_EXCLUDE}"
 UNIPATCH_STRICTORDER="yes"
 
 pkg_postinst() {
