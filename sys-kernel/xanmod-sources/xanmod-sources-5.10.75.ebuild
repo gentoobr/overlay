@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="81"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -13,7 +13,7 @@ XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="+experimental"
+IUSE="experimental" # XanMod's latest CacULE release for 5.10 was 5.10.16. I'm not packaging that.
 
 inherit kernel-2
 detect_version
@@ -27,7 +27,15 @@ SRC_URI="
 
 UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
+# excluding all minor kernel revision patches; XanMod will take care of that
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 10*"
+# excluding GCC CPU optimizations patch, since it's included in XanMod too
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5010_enable-cpu-optimizations-universal.patch"
+
 pkg_postinst() {
+	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
+	elog "with its kernels. For details: see:"
+	elog "https://wiki.gentoo.org/wiki/Microcode"
 	kernel-2_pkg_postinst
 }
 
