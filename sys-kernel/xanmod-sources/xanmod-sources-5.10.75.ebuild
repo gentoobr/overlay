@@ -17,7 +17,6 @@ IUSE="+experimental"
 
 inherit kernel-2
 detect_version
-SLOT="LTS"
 
 DESCRIPTION="Full XanMod sources including the Gentoo patchset - LTS branch"
 SRC_URI="
@@ -27,14 +26,6 @@ SRC_URI="
 "
 
 UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
-
-src_unpack() {
-	kernel-2_src_unpack
-}
-
-src_prepare() {
-	kernel-2_src_prepare
-}
 
 pkg_postinst() {
 	kernel-2_pkg_postinst

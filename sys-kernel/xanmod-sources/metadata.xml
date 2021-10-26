@@ -9,7 +9,7 @@
 		XanMod kernel sources, with the Gentoo base patchset and an option to use the CacULE CPU scheduler.
 	</longdescription>
 	<use>
-		<flag name="cacule">Use the CacULE CPU scheduler - EXPERIMENTAL!</flag>
+		<flag name="cacule">Enable the CacULE CPU scheduler as a config option - EXPERIMENTAL!</flag>
 		<flag name="experimental">Include "experimental" genpatches</flag>
 	</use>
 </pkgmetadata>

@@ -34,11 +34,10 @@ src_unpack() {
 	kernel-2_src_unpack
 }
 
-src_prepare() {
-	kernel-2_src_prepare
-}
-
 pkg_postinst() {
+	elog "The XanMod team strongly advises the use of updated CPU microcodes"
+	elog "with its kernels. For details: see:"
+	elog "https://wiki.gentoo.org/wiki/Microcode"
 	kernel-2_pkg_postinst
 }
 
