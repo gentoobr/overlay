@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras" # 'experimental' patchset won't play nice with XanMod, sorry boyos
-K_GENPATCHES_VER="15"
+K_GENPATCHES_VER="16"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -26,9 +26,8 @@ SRC_URI="
 	${GENPATCHES_URI}
 "
 
-# cara...
-# this will exclude any and all patches which are minor kernel revisions; XanMod will take care of that
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 10*"
+# excluding all minor kernel revision patches; XanMod will take care of that
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 src_unpack() {
 	if use cacule; then
