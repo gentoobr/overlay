@@ -31,7 +31,10 @@ UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 # excluding GCC CPU optimizations patch, since it's included in XanMod too
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5010_enable-cpu-optimizations-universal.patch"
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
+
+# excluding BMQ/PDS schedulers, since those don't play well with XanMod
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 502*_BMQ*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
