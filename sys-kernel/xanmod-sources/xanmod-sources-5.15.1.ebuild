@@ -3,7 +3,7 @@
 
 EAPI="8"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras" # 'experimental' patchset won't play nice with XanMod, sorry boyos
+K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="3"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
@@ -26,8 +26,8 @@ SRC_URI="
 	${GENPATCHES_URI}
 "
 
-# excluding all minor kernel revision patches and GCC cpu-specific optimizations; XanMod will take care of that
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch 5*_enable-cpu-optimizations*.patch"
+# excluding all minor kernel revision patches; XanMod will take care of that
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 src_unpack() {
 	if use tasktype; then

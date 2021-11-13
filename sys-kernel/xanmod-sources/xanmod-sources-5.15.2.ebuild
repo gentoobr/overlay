@@ -3,36 +3,35 @@
 
 EAPI="8"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras" # 'experimental' patchset won't play nice with XanMod, sorry boyos
-K_GENPATCHES_VER="15"
+K_WANT_GENPATCHES="base extras"
+K_GENPATCHES_VER="4"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-XANMOD_VERSION="2"
+XANMOD_VERSION="1"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="cacule"
+IUSE="tasktype"
 
 inherit kernel-2
 detect_version
 
-DESCRIPTION="Full XanMod sources with cacule option and including the Gentoo patchset "
+DESCRIPTION="XanMod Kernel sources with Task Type option and including the Gentoo patchset"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	cacule? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}-cacule/patch-${OKV}-xanmod${XANMOD_VERSION}-cacule.xz )
-	!cacule? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz )
+	!tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz )
+	tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}-tt/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz )
 	${GENPATCHES_URI}
 "
 
-# cara...
-# this will exclude any and all patches which are minor kernel revisions; XanMod will take care of that
-UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 10*"
+# excluding all minor kernel revision patches; XanMod will take care of that
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 src_unpack() {
-	if use cacule; then
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-cacule.xz "
+	if use tasktype; then
+		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz "
 	else
 		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
 	fi
