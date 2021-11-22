@@ -3,8 +3,8 @@
 
 EAPI="8"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras" # 'experimental' patchset won't play nice with XanMod, sorry boyos
-K_GENPATCHES_VER="16"
+K_WANT_GENPATCHES="base extras experimental"
+K_GENPATCHES_VER="88"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -13,30 +13,25 @@ XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="cacule"
+IUSE="experimental"
 
 inherit kernel-2
 detect_version
 
-DESCRIPTION="Full XanMod sources with cacule option and including the Gentoo patchset "
+DESCRIPTION="XanMod kernel sources, including the Gentoo patchset - LTS branch"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	cacule? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}-cacule/patch-${OKV}-xanmod${XANMOD_VERSION}-cacule.xz )
-	!cacule? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz )
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
+
+UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
 # excluding all minor kernel revision patches; XanMod will take care of that
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
-src_unpack() {
-	if use cacule; then
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-cacule.xz "
-	else
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
-	fi
-	kernel-2_src_unpack
-}
+# excluding CPU optimizations patches, since it's included in XanMod too
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
