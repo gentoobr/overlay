@@ -3,8 +3,8 @@
 
 EAPI="8"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="3"
+K_WANT_GENPATCHES="base extras experimental"
+K_GENPATCHES_VER="24"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -13,30 +13,29 @@ XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="tasktype"
+IUSE="experimental"
 
 inherit kernel-2
 detect_version
 
-DESCRIPTION="XanMod Kernel sources with Task Type option and including the Gentoo patchset"
+DESCRIPTION="XanMod kernel sources, including the Gentoo patchset"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	!tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz )
-	tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}-tt/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz )
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
 	${GENPATCHES_URI}
 "
+
+UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
 # excluding all minor kernel revision patches; XanMod will take care of that
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
-src_unpack() {
-	if use tasktype; then
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz "
-	else
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
-	fi
-	kernel-2_src_unpack
-}
+# excluding GCC CPU optimizations patch, since it's included in XanMod too
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
+
+# excluding BMQ/PDS schedulers, since those don't play well with XanMod
+# looks like these were removed in genpatches 5.14-24, but I'll keep this line around just in case.
+UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 502*_BMQ*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
