@@ -28,6 +28,7 @@ UNIPATCH_EXCLUDE="
 	0125-x86-microcode-echo-2-reload-to-force-load-ucode.patch
 	0127-nvme-workaround.patch
 	cluster.patch
+	socket.patch
 	${UNIPATCH_EXCLUDE}
 "
 
