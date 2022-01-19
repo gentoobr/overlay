@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gazports@gmail.com</email>
+		<name>B. Gazotti</name>
+	</maintainer>
+	<longdescription>
+		XanMod kernel sources, with the Gentoo base patchset and PREEMPT_RT patches. Experimental package.
+	</longdescription>
+	<use>
+		<flag name="experimental">Include experimental (5000-5099) genpatches</flag>
+	</use>
+</pkgmetadata>
