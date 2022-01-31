@@ -59,13 +59,14 @@ UNIPATCH_LIST="
 src_unpack() {
 	unpack "${CLEAR_VER}.tar.gz"
 	kernel-2_src_unpack
-	rm -rf "${CLEAR_PATCHDIR}" || die
+	tail +24 "${CLEAR_PATCHDIR}/config" > "${S}/arch/x86/configs/clear.config"
+	rm -rf "${CLEAR_PATCHDIR}"
 }
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
-	einfo "For the default configuration used on Clear Linux, see:"
-	einfo "${HOMEPAGE}"
+	einfo "The default Clear Linux configuration is installed as a fragment."
+	einfo "If you want to use it, run \"make defconfig clear.config\"."
 }
 
 pkg_postrm() {
