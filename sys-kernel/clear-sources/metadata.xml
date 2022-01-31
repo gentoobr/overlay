@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>cassioavila@yandex.com</email>
-		<name>Cássio Ribeiro Alves de Ávila</name>
-	</maintainer>
-	<maintainer type="person">
 		<email>leonardohn@null.net</email>
 		<name>Leonardo H. Neumann</name>
 	</maintainer>
