@@ -4,10 +4,10 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="99"
+K_GENPATCHES_VER="101"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
-XANMOD_VERSION="1"
+XANMOD_VERSION="2"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 
 HOMEPAGE="https://xanmod.org"
@@ -35,7 +35,7 @@ UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details, see:"
+	elog "with its kernels. For details: see:"
 	elog "https://wiki.gentoo.org/wiki/Microcode"
 	kernel-2_pkg_postinst
 }
