@@ -5,6 +5,11 @@
 		<email>leonardo@neumann.dev.br</email>
 		<name>Leonardo H. Neumann</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>carana2099@gmail.com</email>
+		<name>Carlos Eduardo</name>
+		<description>LTS ebuilds</description>
+	</maintainer>
 	<use>
 		<flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
 	</use>
