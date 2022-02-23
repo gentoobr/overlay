@@ -35,7 +35,7 @@ UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details: see:"
+	elog "with its kernels. For details, see:"
 	elog "https://wiki.gentoo.org/wiki/Microcode"
 	kernel-2_pkg_postinst
 }

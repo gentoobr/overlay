@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="23"
+K_GENPATCHES_VER="12"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -18,23 +18,20 @@ IUSE="tasktype"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="XanMod Kernel sources with Task Type option and including the Gentoo patchset"
+DESCRIPTION="XanMod kernel sources, including the Gentoo patchset"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	!tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz )
-	tasktype? ( ${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}-tt/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz )
-	${GENPATCHES_URI}
-"
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
+	tasktype? ( https://raw.githubusercontent.com/hamadmarri/TT-CPU-Scheduler/master/patches/${KV_MAJOR}.${KV_MINOR}/tt-${KV_MAJOR}.${KV_MINOR}.patch )
+	${GENPATCHES_URI}"
+
+UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
 
 # excluding all minor kernel revision patches; XanMod will take care of that
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 src_unpack() {
-	if use tasktype; then
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz "
-	else
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
-	fi
+	use tasktype &&	UNIPATCH_LIST+="${DISTDIR}/tt-${KV_MAJOR}.${KV_MINOR}.patch "
 	kernel-2_src_unpack
 }
 
@@ -45,6 +42,7 @@ pkg_postinst() {
 	kernel-2_pkg_postinst
 }
 
+# not sure if I need to define this
 pkg_postrm() {
 	kernel-2_pkg_postrm
 }
