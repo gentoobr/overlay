@@ -10,5 +10,6 @@
 	</longdescription>
 	<use>
 		<flag name="experimental">Include experimental (5000-5099) genpatches</flag>
+		<flag name="tasktype">Enable the TaskType CPU scheduler as a config option - Highly experimental!</flag>
 	</use>
 </pkgmetadata>
