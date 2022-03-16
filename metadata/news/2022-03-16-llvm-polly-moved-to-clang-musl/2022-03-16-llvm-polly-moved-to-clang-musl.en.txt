@@ -1,0 +1,12 @@
+Title: LLVM and Polly moved to clang-musl overlay
+Author: Leonardo Neumann <leonardo@neumann.dev.br>
+Posted: 2022-03-16
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: sys-devel/llvm
+Display-If-Installed: sys-libs/polly
+
+From March 16, both sys-libs/polly and sys-devel/llvm with polly useflag will
+now be maintained at https://github.com/clang-musl-overlay/clang-musl-overlay
+repository. Despite the clang-musl overlay purpose, both packages will continue
+to support other toolchains.
