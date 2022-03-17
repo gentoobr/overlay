@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="16"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -36,13 +36,7 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details: see:"
-	elog "https://wiki.gentoo.org/wiki/Microcode"
+	elog "The XanMod team strongly suggests the use of updated CPU microcodes with its"
+	elog "kernels. For details, see https://wiki.gentoo.org/wiki/Microcode ."
 	kernel-2_pkg_postinst
-}
-
-# not sure if I need to define this
-pkg_postrm() {
-	kernel-2_pkg_postrm
 }
