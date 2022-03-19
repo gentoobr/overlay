@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="27"
+K_GENPATCHES_VER="32"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -30,21 +30,12 @@ SRC_URI="
 UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch"
 
 src_unpack() {
-	if use tasktype; then
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz "
-	else
-		UNIPATCH_LIST="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
-	fi
+	use tasktype &&	UNIPATCH_LIST+="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}-tt.xz " || UNIPATCH_LIST+="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
 	kernel-2_src_unpack
 }
 
 pkg_postinst() {
-	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details, see:"
-	elog "https://wiki.gentoo.org/wiki/Microcode"
+	elog "The XanMod team strongly suggests the use of updated CPU microcodes with its"
+	elog "kernels. For details, see https://wiki.gentoo.org/wiki/Microcode ."
 	kernel-2_pkg_postinst
-}
-
-pkg_postrm() {
-	kernel-2_pkg_postrm
 }
