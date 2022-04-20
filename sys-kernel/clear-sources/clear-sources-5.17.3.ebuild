@@ -5,8 +5,8 @@ EAPI="8"
 ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="16"
-CLEAR_VER="${PV}-1134"
+K_GENPATCHES_VER="5"
+CLEAR_VER="${PV}-1139"
 
 inherit kernel-2
 detect_version
@@ -33,7 +33,6 @@ UNIPATCH_LIST="
 	"${CLEAR_PATCHDIR}"/0107-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
 	"${CLEAR_PATCHDIR}"/0108-smpboot-reuse-timer-calibration.patch
 	"${CLEAR_PATCHDIR}"/0109-initialize-ata-before-graphics.patch
-	"${CLEAR_PATCHDIR}"/0110-give-rdrand-some-credit.patch
 	"${CLEAR_PATCHDIR}"/0111-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
 	"${CLEAR_PATCHDIR}"/0112-init-wait-for-partition-and-retry-scan.patch
 	"${CLEAR_PATCHDIR}"/0114-add-boot-option-to-allow-unsigned-modules.patch
@@ -49,12 +48,12 @@ UNIPATCH_LIST="
 	"${CLEAR_PATCHDIR}"/0124-x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
 	"${CLEAR_PATCHDIR}"/0126-fix-bug-in-ucode-force-reload-revision-check.patch
 	"${CLEAR_PATCHDIR}"/0128-don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
-	"${CLEAR_PATCHDIR}"/raid6.patch
 	"${CLEAR_PATCHDIR}"/itmt_epb.patch
 	"${CLEAR_PATCHDIR}"/mm-wakeups.patch
 	"${CLEAR_PATCHDIR}"/itmt2.patch
 	"${CLEAR_PATCHDIR}"/percpu-minsize.patch
 	"${CLEAR_PATCHDIR}"/prezero.patch
+	"${CLEAR_PATCHDIR}"/novector.patch
 "
 
 src_unpack() {
