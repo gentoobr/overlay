@@ -4,10 +4,10 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="27"
+K_GENPATCHES_VER="37"
 K_SECURITY_UNSUPPORTED="1"
 XANMOD_VERSION="1"
-_RT_VERSION="rt32"
+_RT_VERSION="rt40"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 
 HOMEPAGE="https://xanmod.org"
@@ -41,14 +41,10 @@ src_unpack() {
 }
 
 pkg_postinst() {
-	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details: see https://wiki.gentoo.org/wiki/Microcode "
+	elog "The XanMod team strongly suggests the use of updated CPU microcodes with its"
+	elog "kernels. For details, see https://wiki.gentoo.org/wiki/Microcode ."
 	einfo "This kernel includes the PREEMPT_RT patchset, and may be subject to a different"
 	einfo "set of bugs than those you'd find in a non-realtime version."
 	einfo "User discretion is advised."
 	kernel-2_pkg_postinst
-}
-
-pkg_postrm() {
-	kernel-2_pkg_postrm
 }
