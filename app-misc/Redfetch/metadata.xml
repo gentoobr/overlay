@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>redson@riseup.net</email>
+        <name>Redson dos Santos Silva</name>
+    </maintainer>
+    <upstream>
+		<bugs-to>https://github.com/RedsonBr140/Redfetch/issues</bugs-to>
+		<remote-id type="github">RedsonBr140/Redfetch</remote-id>
+    </upstream>
+</pkgmetadata>
