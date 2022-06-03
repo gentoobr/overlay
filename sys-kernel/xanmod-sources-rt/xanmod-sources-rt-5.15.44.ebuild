@@ -4,10 +4,10 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="37"
+K_GENPATCHES_VER="48"
 K_SECURITY_UNSUPPORTED="1"
 XANMOD_VERSION="1"
-_RT_VERSION="rt40"
+_RT_VERSION="rt46"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 
 HOMEPAGE="https://xanmod.org"
