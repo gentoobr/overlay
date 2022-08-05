@@ -5,8 +5,8 @@ EAPI="8"
 ETYPE="sources"
 K_SECURITY_UNSUPPORTED="1"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="12"
-CLEAR_VER="${PV}-1143"
+K_GENPATCHES_VER="20"
+CLEAR_VER="${PV}-1165"
 
 inherit kernel-2
 detect_version
@@ -33,7 +33,6 @@ UNIPATCH_LIST="
 	"${CLEAR_PATCHDIR}"/0107-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
 	"${CLEAR_PATCHDIR}"/0108-smpboot-reuse-timer-calibration.patch
 	"${CLEAR_PATCHDIR}"/0109-initialize-ata-before-graphics.patch
-	"${CLEAR_PATCHDIR}"/0110-give-rdrand-some-credit.patch
 	"${CLEAR_PATCHDIR}"/0111-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
 	"${CLEAR_PATCHDIR}"/0112-init-wait-for-partition-and-retry-scan.patch
 	"${CLEAR_PATCHDIR}"/0113-print-fsync-count-for-bootchart.patch
@@ -52,12 +51,12 @@ UNIPATCH_LIST="
 	"${CLEAR_PATCHDIR}"/0126-don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
 	"${CLEAR_PATCHDIR}"/0127-lib-raid6-add-patch.patch
 	"${CLEAR_PATCHDIR}"/0128-itmt_epb-use-epb-to-scale-itmt.patch
-	"${CLEAR_PATCHDIR}"/0129-mm-wakeups-remove-a-wakeup.patch
 	"${CLEAR_PATCHDIR}"/0130-itmt2-ADL-fixes.patch
 	"${CLEAR_PATCHDIR}"/0131-add-a-per-cpu-minimum-high-watermark-an-tune-batch-s.patch
-	"${CLEAR_PATCHDIR}"/0132-prezero-20220308.patch
 	"${CLEAR_PATCHDIR}"/0133-novector.patch
+	"${CLEAR_PATCHDIR}"/scale.patch
 "
+
 src_unpack() {
 	unpack "${CLEAR_VER}.tar.gz"
 	kernel-2_src_unpack
