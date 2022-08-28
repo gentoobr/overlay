@@ -4,22 +4,22 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="107"
+K_GENPATCHES_VER="140"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
-_RT_VERSION="rt62"
+_RT_VERSION="rt72"
 XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
 
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
-IUSE="experimental"
+IUSE="+experimental"
 
 inherit kernel-2
 detect_version
 
-# This is an extremely ugly, albeit highly efficient, solution to keep the PREEMPT_RT patched kernels separate from the lesser kernel sources.
+# I hate myself.
 KV_FULL="${KV_FULL}-${_RT_VERSION}"
 S="${S}-${_RT_VERSION}"
 
@@ -40,11 +40,8 @@ UNIPATCH_EXCLUDE="${UNIPATCH_EXCLUDE} 5*_*cpu-optimization*.patch"
 
 pkg_postinst() {
 	elog "The XanMod team strongly suggests the use of updated CPU microcodes"
-	elog "with its kernels. For details: see https://wiki.gentoo.org/wiki/Microcode "
-	einfo "This kernel includes the PREEMPT_RT patchset, and may be subject to a different"
-	einfo "set of bugs than those you'd find in a non-realtime version."
-	einfo "User discretion is advised."
-
+	elog "with its kernels. For details: see:"
+	elog "https://wiki.gentoo.org/wiki/Microcode"
 	kernel-2_pkg_postinst
 }
 
