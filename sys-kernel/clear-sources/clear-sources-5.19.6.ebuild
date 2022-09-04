@@ -57,7 +57,6 @@ UNIPATCH_LIST="
 	"${CLEAR_PATCHDIR}"/libsgrowdown.patch
 	"${CLEAR_PATCHDIR}"/kdf-boottime.patch
 	"${CLEAR_PATCHDIR}"/adlrdt.patch
-	"${CLEAR_PATCHDIR}"/0001-sched-numa-Initialise-numa_migrate_retry.patch
 	"${CLEAR_PATCHDIR}"/0002-sched-numa-Do-not-swap-tasks-between-nodes-when-spar.patch
 	"${CLEAR_PATCHDIR}"/0003-sched-numa-Apply-imbalance-limitations-consistently.patch
 	"${CLEAR_PATCHDIR}"/0004-sched-numa-Adjust-imb_numa_nr-to-a-better-approximat.patch
