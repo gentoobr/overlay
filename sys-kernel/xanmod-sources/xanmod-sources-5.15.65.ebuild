@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="66"
+K_GENPATCHES_VER="69" # nice
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="XanMod Kernel sources including the Gentoo patchset"
+DESCRIPTION="XanMod Kernel sources including the Gentoo patchset - LTS branch"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz

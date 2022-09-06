@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="XanMod Kernel sources including the Gentoo patchset"
+DESCRIPTION="XanMod Kernel sources including the Gentoo patchset - LTS branch"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
 	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
