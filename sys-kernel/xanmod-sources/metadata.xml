@@ -10,6 +10,5 @@
 	</longdescription>
 	<use>
 		<flag name="experimental">Include "experimental" genpatches</flag>
-		<flag name="tasktype">Enable the Task Type CPU scheduler, successor to CacULE, as a config option - EXPERIMENTAL!</flag>
 	</use>
 </pkgmetadata>
