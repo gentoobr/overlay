@@ -1,0 +1,15 @@
+BDEPEND=dev-libs/wayland-scanner virtual/pkgconfig >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install test
+DEPEND=dev-libs/libinput dev-libs/wayland dev-libs/wayland-protocols >=gui-libs/wlroots-0.16.0:=[X?] media-libs/mesa:=[gles2,wayland,X?] x11-libs/cairo:=[X?,svg] x11-libs/gtk+:3=[wayland,X?] x11-libs/libdrm x11-libs/libxkbcommon:=[X?] x11-libs/pango:=[X?] x11-libs/pixman X? ( x11-base/xwayland x11-libs/libxcb )
+DESCRIPTION=Dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
+EAPI=8
+HOMEPAGE=https://github.com/hyprwm/Hyprland
+INHERIT=toolchain-funcs meson
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=dev-libs/libinput dev-libs/wayland dev-libs/wayland-protocols >=gui-libs/wlroots-0.16.0:=[X?] media-libs/mesa:=[gles2,wayland,X?] x11-libs/cairo:=[X?,svg] x11-libs/gtk+:3=[wayland,X?] x11-libs/libdrm x11-libs/libxkbcommon:=[X?] x11-libs/pango:=[X?] x11-libs/pixman X? ( x11-base/xwayland x11-libs/libxcb )
+SLOT=0
+SRC_URI=https://github.com/hyprwm/Hyprland/releases/download/v0.12.0beta/source-v0.12.0beta.tar.gz -> hyprland-0.12.0.tar.gz
+_eclasses_=toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	python-utils-r1	dd5e1098e305ad508d21f496e9e37046	meson	1994a5aef5d4f5798b92f64d6f9a6003
+_md5_=f674a50e5d7dc6ac33aee02e9e5316fa
