@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras" # BMQ/PDS patch doesn't play nice, but may be applied later
-K_GENPATCHES_VER="12"
+K_GENPATCHES_VER="16"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
