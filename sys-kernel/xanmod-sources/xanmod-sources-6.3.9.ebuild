@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="12"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -26,7 +26,6 @@ SRC_URI="
 UNIPATCH_LIST+="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
-# I know the Gentoo ebuild writing guide advises against the use of this variable in ebuilds, but I've really found no other comparably convenient way to get things to work.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
 
 pkg_postinst() {
