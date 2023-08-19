@@ -4,11 +4,11 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="10"
+K_GENPATCHES_VER="13"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
-XANMOD_URI="https://github.com/xanmod/linux/releases/download/"
+XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/main/"
 
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
