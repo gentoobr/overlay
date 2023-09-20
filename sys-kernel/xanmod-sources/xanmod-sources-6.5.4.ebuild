@@ -4,11 +4,11 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="4"
+K_GENPATCHES_VER="6"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
-XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/edge/"
+XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/main/"
 
 HOMEPAGE="https://xanmod.org"
 LICENSE+=" CDDL"
@@ -20,10 +20,10 @@ detect_version
 DESCRIPTION="Latest XanMod kernel sources, including the Gentoo patchset"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz -> 1509_xanmod-patch.xz
 	${GENPATCHES_URI}"
 
-UNIPATCH_LIST+="${DISTDIR}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz "
+UNIPATCH_LIST+="${DISTDIR}/1509_xanmod-patch.xz"
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
