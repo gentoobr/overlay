@@ -4,7 +4,7 @@
 EAPI="8"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="13"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 XANMOD_VERSION="1"
@@ -18,14 +18,15 @@ inherit kernel-2
 detect_version
 
 DESCRIPTION="Latest XanMod kernel sources, including the Gentoo patchset"
+_xanpatchfile="patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/patch-${OKV}-xanmod${XANMOD_VERSION}.xz -> 1509_xanmod-${OKV}.patch.xz
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 1509_${_xanpatchfile}
 	${GENPATCHES_URI}"
 
 RESTRICT="mirror"
 
-UNIPATCH_LIST+="${DISTDIR}/1509_xanmod-${OKV}.patch.xz"
+UNIPATCH_LIST+="${DISTDIR}/1509_${_xanpatchfile}"
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
