@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="27"
+K_GENPATCHES_VER="28"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -26,6 +26,7 @@ SRC_URI="
 	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 1509_${_xanpatchfile}
 	${GENPATCHES_URI}"
 LICENSE+=" CDDL"
+SLOT="lts"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
