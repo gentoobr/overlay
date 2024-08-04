@@ -5,11 +5,11 @@ EAPI="8"
 ETYPE="sources"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="4"
+K_GENPATCHES_VER="6"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
-XANMOD_CHANNEL="edge"
+XANMOD_CHANNEL="main"
 XANMOD_VERSION="1"
 XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/${XANMOD_CHANNEL}"
 
@@ -21,15 +21,16 @@ detect_version
 
 _xanpatchfile="patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
+# alphanumeric hack needed because patch 2950 expects minor kernel version updates
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile}
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 1000-${_xanpatchfile}
 	${GENPATCHES_URI}"
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
-UNIPATCH_LIST+="${DISTDIR}/${_xanpatchfile}"
+UNIPATCH_LIST+="${DISTDIR}/1000-${_xanpatchfile}"
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
