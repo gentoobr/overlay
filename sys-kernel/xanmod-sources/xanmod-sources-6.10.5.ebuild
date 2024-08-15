@@ -1,11 +1,11 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2024 Gentoo Brazilian Community
 # Distributed under the terms of the GNU General Public License v2-or-later
 
 EAPI="8"
 ETYPE="sources"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="7"
+K_GENPATCHES_VER="8"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -21,16 +21,16 @@ detect_version
 
 _xanpatchfile="patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
-# alphanumeric hack needed because patch 2950 expects minor kernel version updates
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 1000-${_xanpatchfile}
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile}
 	${GENPATCHES_URI}"
+
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
-UNIPATCH_LIST+="${DISTDIR}/1000-${_xanpatchfile}"
+UNIPATCH_LIST+="${DISTDIR}/${_xanpatchfile}"
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
