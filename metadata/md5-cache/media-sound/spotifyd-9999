@@ -12,5 +12,5 @@ RDEPEND=dbus? ( >=sys-apps/dbus-1.12.20-r1 ) alsa? ( >=media-libs/alsa-lib-1.2.5
 REQUIRED_USE=|| ( pulseaudio alsa portaudio rodio )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b2b07efa51009704f88173b2c7feab47	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	cargo	4dede41d64d595673f6da62ab5540fa0	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=4526e618ace00111f861d328ddc8d86a
+_eclasses_=toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	rust-toolchain	3f822985d9297438ed2443aa1fbdf33e	cargo	c806360bab90e2b49223df1810172c2b	git-r3	875eb471682d3e1f18da124be97dcc81
+_md5_=2999f3fed3aafd3a82c24f8ed773d876
