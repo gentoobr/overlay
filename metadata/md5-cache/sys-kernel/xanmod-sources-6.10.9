@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DESCRIPTION=Sources based on the Linux Kernel
+EAPI=8
+HOMEPAGE=https://www.kernel.org/ https://wiki.gentoo.org/wiki/Kernel https://xanmod.org
+INHERIT=kernel-2
+IUSE=symlink build
+KEYWORDS=~amd64
+LICENSE=GPL-2 CDDL
+RDEPEND=!build? ( app-alternatives/cpio dev-lang/perl app-alternatives/bc dev-build/make sys-devel/bison sys-devel/flex >=sys-libs/ncurses-5.2 virtual/libelf virtual/pkgconfig )
+RESTRICT=mirror binchecks strip
+SLOT=6.10.9
+SRC_URI=https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz https://master.dl.sourceforge.net/project/xanmod/releases/main/6.10.9-xanmod1/patch-6.10.9-xanmod1.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.10-12.base.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.10-12.base.tar.xz https://dev.gentoo.org/~alicef/dist/genpatches/genpatches-6.10-12.extras.tar.xz https://dev.gentoo.org/~mpagano/dist/genpatches/genpatches-6.10-12.extras.tar.xz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	crossdev	f04338ff78f213a4a55c5c37b3c6563e	estack	c61c368a76fdf3a82fdf8dbaebea3804	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	kernel-2	0e01377cce73a7a06321d0ef97388d31
+_md5_=6cbfa18713ad65bf3d1678729375bc2a
