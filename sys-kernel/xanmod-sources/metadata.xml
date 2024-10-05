@@ -6,6 +6,9 @@
 		<name>B. Gazotti</name>
 	</maintainer>
 	<longdescription>
-		XanMod kernel sources, with the Gentoo base patchset.
+		XanMod kernel sources, including the Gentoo base and extra patchsets.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">master.dl</remote-id>
+	</upstream>
 </pkgmetadata>
