@@ -5,12 +5,12 @@ EAPI="8"
 ETYPE="sources"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="3"
+K_GENPATCHES_VER="4"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
 XANMOD_CHANNEL="main"
-XANMOD_VERSION="1"
+XANMOD_VERSION="2"
 XANMOD_URI="https://master.dl.sourceforge.net/project/xanmod/releases/${XANMOD_CHANNEL}"
 
 DESCRIPTION="Latest XanMod kernel sources, including the Gentoo patchset"
