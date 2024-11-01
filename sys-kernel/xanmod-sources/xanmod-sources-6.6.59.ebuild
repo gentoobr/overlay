@@ -5,7 +5,7 @@ EAPI="8"
 ETYPE="sources"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="64"
+K_GENPATCHES_VER="67"
 K_SECURITY_UNSUPPORTED="1"
 K_NOSETEXTRAVERSION="1"
 
@@ -23,14 +23,14 @@ _xanpatchfile="patch-${OKV}-xanmod${XANMOD_VERSION}.xz"
 
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 2994_${_xanpatchfile}
+	${XANMOD_URI}/${OKV}-xanmod${XANMOD_VERSION}/${_xanpatchfile} -> 2951_${_xanpatchfile}
 	${GENPATCHES_URI}"
 
 LICENSE+=" CDDL"
 KEYWORDS="~amd64"
 RESTRICT="mirror"
 
-UNIPATCH_LIST+="${DISTDIR}/2994_${_xanpatchfile}"
+UNIPATCH_LIST+="${DISTDIR}/2951_${_xanpatchfile}"
 
 # excluding all minor kernel revision patches; XanMod will take care of that.
 UNIPATCH_EXCLUDE+=" 1*_linux-${KV_MAJOR}.${KV_MINOR}.*.patch "
