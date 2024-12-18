@@ -373,7 +373,7 @@ IUSE="+alsa pulseaudio -portaudio -sdl -gstreamer jack -rodio -jack-on-rodio"
 REQUIRED_USE="jack-on-rodio? ( jack rodio )"
 #DEPEND="alsa-lib libsdl2 pulseaudio libpulse jack-audio-connection-kit" # depending on flags, TODO
 RDEPEND="${DEPEND}"
-BDEPEND="virtual/rust"
+BDEPEND="|| ( >=dev-lang/rust-1.78.0 >=dev-lang/rust-bin-1.78.0 )"
 
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
